@@ -38,12 +38,10 @@
   },
   "include": [
     "app",
-    "server",
     "common",
   ],
   "exclude": [
     "dist",
     "node_modules",
-    "db-data"
   ]
 }

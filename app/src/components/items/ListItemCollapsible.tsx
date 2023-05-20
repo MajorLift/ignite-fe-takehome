@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { JSX, useEffect, useState } from 'react'
 
 import { useDeleteItemMutation, useFindAllItemsQuery } from '@mono/api'
 import { useAppDispatch, useAppSelector } from '@mono/core'

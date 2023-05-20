@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { JSX } from 'react'
 
 import { useFindAllItemsQuery } from '@mono/api'
 import { ListItemCollapsible } from 'components/items'
