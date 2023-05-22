@@ -16,6 +16,7 @@
   "references": [],
   "include": [
     "src",
-    "tests"
+    "tests",
+    "src/mock-data.json"
   ]
 }

@@ -55,9 +55,12 @@
     "@mono/core": "1.0.0",
     "@mono/feature": "1.0.0",
     "@mono/ui": "1.0.0",
+    "buffer": "6.0.3",
+    "crypto-browserify": "3.12.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
-    "react-router-dom": "^6.11.1"
+    "react-router-dom": "^6.11.1",
+    "stream-browserify": "3.0.0"
   }
 }

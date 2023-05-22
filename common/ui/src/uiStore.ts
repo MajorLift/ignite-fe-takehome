@@ -2,11 +2,13 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 import type { UUID } from '@mono/feature'
 import type { UIState } from './'
+import { treeSlice } from '@mono/feature';
 
 const initialState = {
+  openState: new Array(treeSlice.nodes.length).fill(false),
+  openAll: false,
   activeItemId: undefined, // unsaved draft has null id
   showEditorModal: false,
-  openAll: false,
 }
 
 export const uiSlice = createSlice({
