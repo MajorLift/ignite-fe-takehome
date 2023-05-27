@@ -1,6 +1,10 @@
 import type { DateTimeString, ITreeNode, UUID } from './types'
 
-export function getCurrentDateTimeString() {
+export function getCurrentDateTimeString(): ReturnType<
+  typeof Date.prototype.toISOString
+> extends `${infer DateString extends `${string}-${string}-${string}`}T${infer TimeString extends `${string}:${string}:${string}`}.${string}Z`
+  ? `${DateString} ${TimeString}`
+  : DateTimeString {
   return new Date()
     .toISOString()
     .slice(0, -5)
