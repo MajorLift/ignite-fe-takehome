@@ -1,0 +1,35 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": false,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "types": [
+      "node",
+      "jest",
+      "redux"
+    ],
+  },
+  "paths": {
+    "@filetree/feature": [
+      "../feature/src"
+    ],
+    "@filetree/api": [
+      "../api/src"
+    ],
+  },
+  "references": [
+    {
+      "path": "../feature/tsconfig.json",
+    },
+    {
+      "path": "../api/tsconfig.json",
+    },
+  ],
+  "include": [
+    "src",
+    "test"
+  ]
+}

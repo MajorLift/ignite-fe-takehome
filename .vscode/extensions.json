@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "EditorConfig.EditorConfig",
+    "mike-co.import-sorter",
+    "heybourn.headwind",
+    "bradlc.vscode-tailwindcss",
+  ],
+  "unwantedRecommendations": []
+}

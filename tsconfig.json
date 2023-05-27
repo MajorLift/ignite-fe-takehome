@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
+    "noEmit": true,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": false,
+    "preserveSymlinks": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "experimentalDecorators": true
+  },
+  "include": [
+    "app",
+    "common"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
+}
