@@ -3,7 +3,7 @@ import { v4 as uuid } from 'uuid'
 
 import { normalizedNodes, rootIds } from '@filetree/api'
 import type { RootState } from '@filetree/core'
-import type { ITreeNode, ITreeState, UUID } from '.'
+import type { IBaseNode, ITreeNode, ITreeState, UUID } from '.'
 import { getCurrentDateTimeString, isDescendant } from '.'
 
 const initialState: ITreeState = {
@@ -69,7 +69,7 @@ export const treeSlice = createSlice({
         payload: { name, kind },
       }: PayloadAction<{ name: string | ''; kind: 'directory' | 'file' }>
     ) => {
-      const baseNode = {
+      const baseNode: IBaseNode = {
         id: uuid() as UUID,
         name,
         parent: null,

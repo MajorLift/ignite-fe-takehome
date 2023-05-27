@@ -14,20 +14,22 @@ export interface ITreeState {
 
 export type ITreeNode = IDirectoryNode | IFileNode
 
-export interface IDirectoryNode {
-  readonly id: UUID
-  name: string
+export interface IDirectoryNode extends IBaseNode {
   readonly kind: 'directory'
   children: UUID[]
-  parent: UUID | null
 }
 
-export interface IFileNode {
-  readonly id: UUID
-  name: `${string}.${string}` | string
+export interface IFileNode extends IBaseNode {
   readonly kind: 'file'
+  name: `${string}${'.' | ''}${string}`
   size: `${number}${'' | 'K' | 'M' | 'G' | 'T' | 'P'}B`
   modified: DateTimeString
+}
+
+export interface IBaseNode {
+  readonly id: UUID
+  readonly kind?: string
+  name: string
   parent: UUID | null
 }
 

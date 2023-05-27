@@ -27,5 +27,5 @@ export function processTree(node: IRawTreeNode, isRoot = false): ITreeNode {
 
 const data = Array.isArray(mockData) ? [...mockData] : [{ ...mockData }]
 export const rootIds: UUID[] = data.map(
-  (rootNode) => processTree(rootNode as IRawTreeNode, true).id
+  (rootNode: IRawTreeNode) => processTree(rootNode, true).id
 )
