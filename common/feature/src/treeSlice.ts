@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { v4 as uuid } from 'uuid'
 
 import { normalizedNodes, rootIds } from '@filetree/api'
 import type { RootState } from '@filetree/core'
@@ -70,7 +69,7 @@ export const treeSlice = createSlice({
       }: PayloadAction<{ name: string | ''; kind: 'directory' | 'file' }>
     ) => {
       const baseNode: IBaseNode = {
-        id: uuid() as UUID,
+        id: globalThis.crypto.randomUUID(),
         name,
         parent: null,
       }

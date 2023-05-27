@@ -1,4 +1,4 @@
-export type UUID = `${string}-${string}-${string}-${string}-${string}`
+export type UUID = ReturnType<typeof globalThis.crypto.randomUUID>
 
 export type DateTimeString =
   `${string}-${string}-${string} ${string}:${string}:${string}`
