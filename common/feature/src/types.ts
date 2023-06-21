@@ -3,15 +3,6 @@ export type UUID = ReturnType<typeof globalThis.crypto.randomUUID>
 export type DateTimeString =
   `${string}-${string}-${string} ${string}:${string}:${string}`
 
-export interface ITreeState {
-  nodes: Record<UUID, ITreeNode>
-  rootIds: UUID[]
-  activeId: UUID | null
-  editId: UUID | null
-  expandAll: boolean
-  isNodeExpanded: Record<UUID, boolean>
-}
-
 export type ITreeNode = IDirectoryNode | IFileNode
 
 export interface IDirectoryNode extends IBaseNode {
@@ -28,7 +19,6 @@ export interface IFileNode extends IBaseNode {
 
 export interface IBaseNode {
   readonly id: UUID
-  readonly kind?: string
   name: string
   parent: UUID | null
 }

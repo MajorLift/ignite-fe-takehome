@@ -2,10 +2,19 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 import { normalizedNodes, rootIds } from '@filetree/api'
 import type { RootState } from '@filetree/core'
-import type { IBaseNode, ITreeNode, ITreeState, UUID } from '.'
+import type { IBaseNode, ITreeNode, UUID } from '.'
 import { getCurrentDateTimeString, isDescendant } from '.'
 
-const initialState: ITreeState = {
+type TreeState = {
+  nodes: Record<UUID, ITreeNode>
+  rootIds: UUID[]
+  activeId: UUID | null
+  editId: UUID | null
+  expandAll: boolean
+  isNodeExpanded: Record<UUID, boolean>
+}
+
+const initialState: TreeState = {
   nodes: normalizedNodes,
   rootIds,
   activeId: null,
